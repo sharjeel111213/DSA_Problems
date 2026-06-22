@@ -18,9 +18,6 @@ To form a single instance of the word **"balloon"**, we require a specific frequ
 
 The maximum number of complete words we can form is determined by the **limiting factor (bottleneck)**—the character that runs out first. Since the letters `'l'` and `'o'` appear twice in the target word, we must divide their total frequencies by 2 (using integer division) before finding the minimum constraint.
 
-### Mathematical Formula:
-$$\text{Max Balloons} = \min\left(\text{count}(b), \text{count}(a), \frac{\text{count}(l)}{2}, \frac{\text{count}(o)}{2}, \text{count}(n)\right)$$
-
 ---
 
 ## 🛠️ Code Implementation (Kotlin)
