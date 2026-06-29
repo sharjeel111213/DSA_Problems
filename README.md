@@ -35,12 +35,9 @@ To achieve the optimal **$O(\log(\min(m, n)))$** time complexity, a **Binary Sea
 2. **Binary Partitioning:** We divide both arrays into a left half and a right half such that:
    * The total number of elements in the combined left halves equals the total elements in the combined right halves.
    * `maxLeftX <= minRightY` and `maxLeftY <= minRightX`
-3. **Median Calculation:** * If the combined length $(m + n)$ is **odd**, the median is the maximum element of the left halves: $\max(\text{maxLeftX}, \text{maxLeftY})$.
-   * If the combined length is **even**, the median is the average of the maximum of the left halves and the minimum of the right halves: $\frac{\max(\text{maxLeftX}, \text{maxLeftY}) + \min(\text{minRightX}, \text{minRightY})}{2.0}$.
+3. **Median Calculation:** * If the combined length $(m + n)$ is **odd**, the median is the maximum element of the left halves: 
 
----
-
-## 📊 Complexity Analysis
-
-* **Time Complexity:** $\mathcal{O}(\log(\min(m, n)))$ — Highly efficient as the binary search space is bounded by the size of the smaller array.
-* **Space Complexity:** $\mathcal{O}(1)$ — In-place pointer manipulation; no extra memory allocation required.
+$\max(\text{maxLeftX}, \text{maxLeftY})$.
+   * If the combined length is **even**, the median is the average of the maximum of the left halves and the minimum of the right halves: 
+   
+   $\frac{\max(\text{maxLeftX}, \text{maxLeftY}) + \min(\text{minRightX}, \text{minRightY})}{2.0}$.
